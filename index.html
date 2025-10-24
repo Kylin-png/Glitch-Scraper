@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergent Human Simulation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Emergent Human Simulation</h1>
+    <div class="controls">
+      <button id="pauseBtn">Pause</button>
+      <button id="resumeBtn">Resume</button>
+      <button id="saveBtn">Save</button>
+      <button id="loadBtn">Load</button>
+      <label>
+        Speed
+        <input type="range" id="speedSlider" min="20" max="400" value="100">
+      </label>
+    </div>
+  </header>
+  <main>
+    <section class="canvas-container">
+      <canvas id="worldCanvas" width="800" height="800"></canvas>
+      <div class="camera-hint">Drag to pan • Scroll to zoom • Tap agents to follow</div>
+    </section>
+    <aside id="sidebar">
+      <div class="stat-group">
+        <h2>World Stats</h2>
+        <ul>
+          <li>Tick: <span id="tickStat">0</span></li>
+          <li>Population: <span id="populationStat">0</span></li>
+          <li>Avg Aggression: <span id="aggressionStat">0</span></li>
+          <li>Avg Ambition: <span id="ambitionStat">0</span></li>
+          <li>Factions: <span id="factionStat">0</span></li>
+          <li>Active Conflicts: <span id="conflictStat">0</span></li>
+          <li>Trades Last 100 Ticks: <span id="tradeStat">0</span></li>
+          <li>Betrayals Last 100 Ticks: <span id="betrayalStat">0</span></li>
+          <li>Average Wealth: <span id="wealthStat">0</span></li>
+          <li>Currency Adoption: <span id="currencyStat">0</span></li>
+          <li>Language Cohesion: <span id="languageStat">0</span></li>
+        </ul>
+      </div>
+      <div id="selectedAgent" class="stat-group hidden">
+        <h2>Agent Insight</h2>
+        <div id="agentDetails"></div>
+      </div>
+    </aside>
+  </main>
+  <footer>
+    <p>Observe emergent societies driven by survival incentives. Adjust viewport and follow individuals for deeper insight.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
